@@ -13,8 +13,8 @@
 
 @interface ViewController ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet MyTextView *textViewInput;
-@property (weak, nonatomic) IBOutlet MyLabel *label1;
 @property (weak, nonatomic) IBOutlet MyLabel *label2;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic, assign) BOOL bMenuShow;
 @end
 
@@ -22,13 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.textView.tintColor = UIColor.redColor;
+//    self.textView.tintColor = UIColor.redColor;
+
     //设置输入视图
     [self addNotify];
 }
+
 - (void)addNotify
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(DidHideMenu:) name:UIMenuControllerDidHideMenuNotification object:nil];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WillShowMenu:) name:UIMenuControllerWillShowMenuNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WillHideMenu:) name:UIMenuControllerWillHideMenuNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MenuFrameDidChange:) name:UIMenuControllerMenuFrameDidChangeNotification object:nil];
@@ -81,7 +84,13 @@
 - (IBAction)longPress1:(UILongPressGestureRecognizer *)gestureRecognizer {
     if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]]
         && gestureRecognizer.state == UIGestureRecognizerStateBegan) {
-        [self onLongPressInView:self.label1];
+        [self onLongPressInView:self.textView];
+       
+        //要成为第一响应者,否则无效
+        [self.textView becomeFirstResponder];
+
+//        self.textView.selectedRange = NSMakeRange(0, self.textView.text.length);
+        [self.textView setSelectedTextRange:[self.textView textRangeFromPosition:self.textView.beginningOfDocument toPosition:self.textView.endOfDocument]];
     }
 }
 - (IBAction)longPress2:(UILongPressGestureRecognizer *)gestureRecognizer {
@@ -89,6 +98,7 @@
         && gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         
         [self onLongPressInView:self.label2];
+//        [self.label2 setSelectedTextRange:[self.label2 textRangeFromPosition:self.label2.beginningOfDocument toPosition:self.label2.endOfDocument]];
     }
 }
 //- (void)addSWMenuController:(UIView *)view
@@ -121,7 +131,7 @@
 //    UIView *firstResponder = [keyWindow performSelector:@selector(firstResponder)];
 //    [self.textViewInput resignFirstResponder];
 //    [self becomeFirstResponder];
-//    [self.label1 becomeFirstResponder];
+//    [self.textView becomeFirstResponder];
     
 //    [view resignFirstResponder];
 
@@ -202,10 +212,10 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
 //    CGPoint point = [[touches anyObject] locationInView:self.view];
-//    CGPoint point1 = [self.label1.layer convertPoint:point fromLayer:self.view.layer];
+//    CGPoint point1 = [self.textView.layer convertPoint:point fromLayer:self.view.layer];
 //    CGPoint point2 = [self.label2.layer convertPoint:point fromLayer:self.view.layer];
 //
-//    if ([self.label1.layer containsPoint:point1]
+//    if ([self.textView.layer containsPoint:point1]
 //        ||[self.label2.layer containsPoint:point2]) {
 //        
 //    } else {
