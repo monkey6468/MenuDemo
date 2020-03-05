@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wsg-M1-s8X" customClass="MyTextView">
+                                <rect key="frame" x="87" y="488" width="240" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.52549019610000003" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="7ag-zy-aEW"/>
+                                    <constraint firstAttribute="height" constant="44" id="lIK-4c-q0Y"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自定义de" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUy-LC-Op9" userLabel="Label1" customClass="MyLabel">
+                                <rect key="frame" x="87" y="410" width="240" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.50168601140000002" blue="0.99308707039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0q7-0k-49L"/>
+                                    <constraint firstAttribute="height" constant="70" id="eGi-sT-BIl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eAI-M4-ytc" appends="YES" id="EbU-ny-yk3"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="系统的" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGC-lJ-OBD" customClass="MyLabel">
+                                <rect key="frame" x="87" y="332" width="240" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.50168601140000002" blue="0.99308707039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="9ti-py-OBP"/>
+                                    <constraint firstAttribute="width" constant="240" id="fI6-si-wCx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uv5-GV-H2N" appends="YES" id="mdS-aD-TzG"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wsg-M1-s8X" secondAttribute="bottom" constant="330" id="AcU-n0-ME1"/>
+                            <constraint firstItem="wsg-M1-s8X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I7r-4Y-Bg1"/>
+                            <constraint firstItem="wGC-lJ-OBD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N1i-9d-wBk"/>
+                            <constraint firstItem="hUy-LC-Op9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T64-YI-BzG"/>
+                            <constraint firstItem="hUy-LC-Op9" firstAttribute="top" secondItem="wGC-lJ-OBD" secondAttribute="bottom" constant="8" id="hEK-Vl-T8O"/>
+                            <constraint firstItem="wsg-M1-s8X" firstAttribute="top" secondItem="hUy-LC-Op9" secondAttribute="bottom" constant="8" id="qwr-dh-MeP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="hUy-LC-Op9" id="64l-2f-vUb"/>
+                        <outlet property="label2" destination="wGC-lJ-OBD" id="JeV-Lm-3nm"/>
+                        <outlet property="textViewInput" destination="wsg-M1-s8X" id="7Fl-DE-iK1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="eAI-M4-ytc" userLabel="longPress1">
+                    <connections>
+                        <action selector="longPress1:" destination="BYZ-38-t0r" id="Ght-PX-YcY"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="uv5-GV-H2N" userLabel="longPress2">
+                    <connections>
+                        <action selector="longPress2:" destination="BYZ-38-t0r" id="2dv-Uk-Lm4"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-249.27536231884059" y="53.571428571428569"/>
+        </scene>
+    </scenes>
+</document>
