@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A666A7BB241240B8005E9DD4 /* KLTagLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A666A7B4241240B8005E9DD4 /* KLTagLayer.m */; };
+		A666A7BC241240B8005E9DD4 /* KLPopMenuTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A666A7B7241240B8005E9DD4 /* KLPopMenuTool.m */; };
+		A666A7BD241240B8005E9DD4 /* KLPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A666A7B8241240B8005E9DD4 /* KLPopMenuView.m */; };
+		A666A7BE241240B8005E9DD4 /* KLPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A666A7BA241240B8005E9DD4 /* KLPopMenu.m */; };
 		A66F55D023CEED96009D1720 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F55CF23CEED96009D1720 /* AppDelegate.m */; };
 		A66F55D323CEED96009D1720 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F55D223CEED96009D1720 /* SceneDelegate.m */; };
 		A66F55D623CEED96009D1720 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F55D523CEED96009D1720 /* ViewController.m */; };
@@ -22,6 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A666A7B1241240B8005E9DD4 /* KLPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLPopMenu.h; sourceTree = "<group>"; };
+		A666A7B3241240B8005E9DD4 /* KLTagLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTagLayer.h; sourceTree = "<group>"; };
+		A666A7B4241240B8005E9DD4 /* KLTagLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTagLayer.m; sourceTree = "<group>"; };
+		A666A7B6241240B8005E9DD4 /* KLPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLPopMenuView.h; sourceTree = "<group>"; };
+		A666A7B7241240B8005E9DD4 /* KLPopMenuTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLPopMenuTool.m; sourceTree = "<group>"; };
+		A666A7B8241240B8005E9DD4 /* KLPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLPopMenuView.m; sourceTree = "<group>"; };
+		A666A7B9241240B8005E9DD4 /* KLPopMenuTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLPopMenuTool.h; sourceTree = "<group>"; };
+		A666A7BA241240B8005E9DD4 /* KLPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLPopMenu.m; sourceTree = "<group>"; };
 		A66F55CB23CEED96009D1720 /* MenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66F55CE23CEED96009D1720 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A66F55CF23CEED96009D1720 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,10 +69,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A666A7B0241240B8005E9DD4 /* KLPopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A666A7B1241240B8005E9DD4 /* KLPopMenu.h */,
+				A666A7B2241240B8005E9DD4 /* component */,
+				A666A7B5241240B8005E9DD4 /* coreCompetency */,
+				A666A7BA241240B8005E9DD4 /* KLPopMenu.m */,
+			);
+			path = KLPopMenu;
+			sourceTree = "<group>";
+		};
+		A666A7B2241240B8005E9DD4 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				A666A7B3241240B8005E9DD4 /* KLTagLayer.h */,
+				A666A7B4241240B8005E9DD4 /* KLTagLayer.m */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		A666A7B5241240B8005E9DD4 /* coreCompetency */ = {
+			isa = PBXGroup;
+			children = (
+				A666A7B6241240B8005E9DD4 /* KLPopMenuView.h */,
+				A666A7B7241240B8005E9DD4 /* KLPopMenuTool.m */,
+				A666A7B8241240B8005E9DD4 /* KLPopMenuView.m */,
+				A666A7B9241240B8005E9DD4 /* KLPopMenuTool.h */,
+			);
+			path = coreCompetency;
+			sourceTree = "<group>";
+		};
 		A66F55C223CEED96009D1720 = {
 			isa = PBXGroup;
 			children = (
 				A6BB3C6C23D0138B00D42AF5 /* PrefixHeader.pch */,
+				A666A7B0241240B8005E9DD4 /* KLPopMenu */,
 				A66F55CD23CEED96009D1720 /* MenuDemo */,
 				A66F55CC23CEED96009D1720 /* Products */,
 			);
@@ -196,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A666A7BD241240B8005E9DD4 /* KLPopMenuView.m in Sources */,
 				A6BB3C6A23D00FA900D42AF5 /* SWMenuArrow.swift in Sources */,
 				A67750532410A7EF0058D0F5 /* UITextView+Add.m in Sources */,
 				A66F55D623CEED96009D1720 /* ViewController.m in Sources */,
@@ -203,8 +248,11 @@
 				A66F55D023CEED96009D1720 /* AppDelegate.m in Sources */,
 				A6BB3C6523D0027600D42AF5 /* MyTextView.m in Sources */,
 				A6BB3C6B23D00FA900D42AF5 /* SWMenuController.swift in Sources */,
+				A666A7BB241240B8005E9DD4 /* KLTagLayer.m in Sources */,
 				A66F55E123CEED9A009D1720 /* main.m in Sources */,
 				A66F55D323CEED96009D1720 /* SceneDelegate.m in Sources */,
+				A666A7BC241240B8005E9DD4 /* KLPopMenuTool.m in Sources */,
+				A666A7BE241240B8005E9DD4 /* KLPopMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
