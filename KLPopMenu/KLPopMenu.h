@@ -20,7 +20,7 @@
 - (void)showItemList:(NSArray<NSString *> *)itemList withTargetView:(UIView *)targetView;
 - (void)showItemList:(NSArray<NSString *> *)itemList withTargetView:(UIView *)targetView inSuperview:(UIView *)popMenuSuperview;
 - (void)showItemList:(NSArray<NSString *> *)itemList withTargetRect:(CGRect)targetRect inSuperview:(UIView *)popMenuSuperview;
-- (void)hid;
+- (void)hide;
 
 /** called after show... methd */
 - (void)addNewTagForItems:(NSArray<NSString *> *)items;

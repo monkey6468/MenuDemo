@@ -7,15 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "MyTextView.h"
-#import "MyLabel.h"
 #import "MenuDemo-Swift.h"
 #import "KLPopMenu.h"
 
 @interface ViewController ()<UITextViewDelegate, KLPopMenuDelegate>
-@property (weak, nonatomic) IBOutlet MyTextView *textViewInput;
+@property (weak, nonatomic) IBOutlet UITextView *textViewInput;
 @property (strong, nonatomic) KLPopMenu *popMenu;
-@property (weak, nonatomic) IBOutlet MyLabel *label2;
+@property (weak, nonatomic) IBOutlet UILabel *label2;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic, assign) BOOL bMenuShow;
 @end
@@ -24,9 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _popMenu = [KLPopMenu new];
-    _popMenu.delegate = self;
-
     self.textView.tintColor = UIColor.redColor;
 //    self.textView.tintColor = UIColor.redColor;
     [self.textViewInput becomeFirstResponder];
@@ -43,15 +38,11 @@
 }
 - (void)DidHideMenu:(NSNotification *)notify
 {
-    [self resignFirstResponder];
-//    if (self.bMenuShow == YES && [UIMenuController sharedMenuController].menuItems.count) {
-//        [UIMenuController sharedMenuController].menuItems = nil;
-//    }
     NSLog(@"%s",__func__);
 }
 - (void)WillShowMenu:(NSNotification *)notify
 {
-    [_popMenu hid];
+//    [self.popMenu hide];
     NSLog(@"%s",__func__);
 }
 - (void)WillHideMenu:(NSNotification *)notify
@@ -86,10 +77,7 @@
         && gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         
         NSArray *itemList = @[@"撤回", @"复制", @"转发", @"收藏", @"删除"];
-        [_popMenu showItemList:itemList withTargetView:self.label2];
-
-//        [self onLongPressInView:self.label2];
-//        [self.label2 setSelectedTextRange:[self.label2 textRangeFromPosition:self.label2.beginningOfDocument toPosition:self.label2.endOfDocument]];
+        [self.popMenu showItemList:itemList withTargetView:self.label2];
     }
 }
 
@@ -141,7 +129,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [_popMenu hid];
+    [self.popMenu hide];
 }
 
 #pragma mark - KLPopMenuDelegate
@@ -149,4 +137,12 @@
     NSLog(@"--%@", title);
 }
 
+- (KLPopMenu *)popMenu
+{
+    if (!_popMenu) {
+        _popMenu = [[KLPopMenu alloc]init];
+        _popMenu.delegate = self;
+    }
+    return _popMenu;
+}
 @end

@@ -56,10 +56,10 @@ CGPoint getCrossPoint(CGPoint point11, CGPoint point12, CGFloat x) {
     //set context
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetRGBStrokeColor(context, 0.8, 0.8, 0.8, 0.9);
-    CGContextSetLineWidth(context, 0.3);
+    CGContextSetRGBStrokeColor(context, 0.4, 0.4, 0.4, 0.9);
+    CGContextSetLineWidth(context, 0.2);
     if (isHighlight) {
-        CGContextSetRGBFillColor(context, 0.6, 0.6, 0.6, 0.9);
+        CGContextSetRGBFillColor(context, 0.25, 0.25, 0.25, 0.9);
     } else {
         CGContextSetRGBFillColor(context, 0, 0, 0, 0.9);
     }
@@ -110,10 +110,11 @@ CGPoint getCrossPoint(CGPoint point11, CGPoint point12, CGFloat x) {
 + (NSArray<NSValue *> *)rectsWidthItemList:(NSArray<NSString *> *)itemList systemFontSize:(CGFloat)fontSize rectHeight:(CGFloat)rectHeight {
     NSMutableArray *itemRects = [NSMutableArray arrayWithCapacity:itemList.count];
     CGFloat rectX = 0;
+    CGFloat space = 40;
     for (NSString *item in itemList) {
-        CGFloat itemWidth = [KLPopMenuTool widthOfText:item systemFontSize:fontSize] + 26;
+        CGFloat itemWidth = [KLPopMenuTool widthOfText:item systemFontSize:fontSize] + space;
         if ([item isEqualToString:KLPopMenuNextGroup] || [item isEqualToString:KLPopMenuPreviousGroup]) {
-            itemWidth = 26;
+            itemWidth = space;
         }
         itemWidth = MIN(itemWidth, 80);
         CGRect itemRect = CGRectMake(rectX, 0, itemWidth, rectHeight);
@@ -125,7 +126,7 @@ CGPoint getCrossPoint(CGPoint point11, CGPoint point12, CGFloat x) {
 
 #pragma mark - widthOfText
 + (CGFloat)widthOfText:(NSString *)text systemFontSize:(CGFloat)fontSize {
-    CGSize size = [text boundingRectWithSize:CGSizeMake(MAXFLOAT, 45) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:fontSize]} context:nil].size;
+    CGSize size = [text boundingRectWithSize:CGSizeMake(MAXFLOAT, KLPopMenuHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:fontSize]} context:nil].size;
     return size.width;
 }
 

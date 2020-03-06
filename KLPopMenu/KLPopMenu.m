@@ -57,7 +57,7 @@
     [self showWithItemList:_itemListArray[_currentArrayIndex]];
 }
 
-- (void)hid {
+- (void)hide {
     [_currentPopMenuView removeFromSuperview];
 }
 
@@ -86,7 +86,7 @@
 
 #pragma mark - private
 - (void)showWithItemList:(NSArray<NSString *> *)itemList {
-    [self hid];
+    [self hide];
     if ((itemList.count < 1) || (_popMenuSuperview == nil) || (_arrowDirection == KLMenuViewArrowDirectionNoDef)) {return;}
     
     //1.itemList 2.arrowDirection 3.popMenuSuperview 4.targetRectInSuperview

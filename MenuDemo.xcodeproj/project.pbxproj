@@ -19,8 +19,6 @@
 		A66F55DE23CEED9A009D1720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A66F55DC23CEED9A009D1720 /* LaunchScreen.storyboard */; };
 		A66F55E123CEED9A009D1720 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F55E023CEED9A009D1720 /* main.m */; };
 		A67750532410A7EF0058D0F5 /* UITextView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = A67750522410A7EF0058D0F5 /* UITextView+Add.m */; };
-		A69099FF23D1824F001F23B4 /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A69099FE23D1824F001F23B4 /* MyLabel.m */; };
-		A6BB3C6523D0027600D42AF5 /* MyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BB3C6423D0027600D42AF5 /* MyTextView.m */; };
 		A6BB3C6A23D00FA900D42AF5 /* SWMenuArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB3C6823D00FA900D42AF5 /* SWMenuArrow.swift */; };
 		A6BB3C6B23D00FA900D42AF5 /* SWMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB3C6923D00FA900D42AF5 /* SWMenuController.swift */; };
 /* End PBXBuildFile section */
@@ -48,10 +46,6 @@
 		A66F55E023CEED9A009D1720 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A67750512410A7EF0058D0F5 /* UITextView+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Add.h"; sourceTree = "<group>"; };
 		A67750522410A7EF0058D0F5 /* UITextView+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Add.m"; sourceTree = "<group>"; };
-		A69099FD23D1824F001F23B4 /* MyLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLabel.h; sourceTree = "<group>"; };
-		A69099FE23D1824F001F23B4 /* MyLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLabel.m; sourceTree = "<group>"; };
-		A6BB3C6323D0027600D42AF5 /* MyTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTextView.h; sourceTree = "<group>"; };
-		A6BB3C6423D0027600D42AF5 /* MyTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTextView.m; sourceTree = "<group>"; };
 		A6BB3C6723D00FA800D42AF5 /* MenuDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MenuDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		A6BB3C6823D00FA900D42AF5 /* SWMenuArrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMenuArrow.swift; sourceTree = "<group>"; };
 		A6BB3C6923D00FA900D42AF5 /* SWMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMenuController.swift; sourceTree = "<group>"; };
@@ -73,9 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				A666A7B1241240B8005E9DD4 /* KLPopMenu.h */,
+				A666A7BA241240B8005E9DD4 /* KLPopMenu.m */,
 				A666A7B2241240B8005E9DD4 /* component */,
 				A666A7B5241240B8005E9DD4 /* coreCompetency */,
-				A666A7BA241240B8005E9DD4 /* KLPopMenu.m */,
 			);
 			path = KLPopMenu;
 			sourceTree = "<group>";
@@ -125,8 +119,6 @@
 				A6BB3C6923D00FA900D42AF5 /* SWMenuController.swift */,
 				A6BB3C6723D00FA800D42AF5 /* MenuDemo-Bridging-Header.h */,
 				A67750502410A7BA0058D0F5 /* category */,
-				A69099FC23D1822B001F23B4 /* MyLabel */,
-				A6BB3C6223D0025500D42AF5 /* MyTextView */,
 				A66F55CE23CEED96009D1720 /* AppDelegate.h */,
 				A66F55CF23CEED96009D1720 /* AppDelegate.m */,
 				A66F55D123CEED96009D1720 /* SceneDelegate.h */,
@@ -149,24 +141,6 @@
 				A67750522410A7EF0058D0F5 /* UITextView+Add.m */,
 			);
 			path = category;
-			sourceTree = "<group>";
-		};
-		A69099FC23D1822B001F23B4 /* MyLabel */ = {
-			isa = PBXGroup;
-			children = (
-				A69099FD23D1824F001F23B4 /* MyLabel.h */,
-				A69099FE23D1824F001F23B4 /* MyLabel.m */,
-			);
-			path = MyLabel;
-			sourceTree = "<group>";
-		};
-		A6BB3C6223D0025500D42AF5 /* MyTextView */ = {
-			isa = PBXGroup;
-			children = (
-				A6BB3C6323D0027600D42AF5 /* MyTextView.h */,
-				A6BB3C6423D0027600D42AF5 /* MyTextView.m */,
-			);
-			path = MyTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,9 +218,7 @@
 				A6BB3C6A23D00FA900D42AF5 /* SWMenuArrow.swift in Sources */,
 				A67750532410A7EF0058D0F5 /* UITextView+Add.m in Sources */,
 				A66F55D623CEED96009D1720 /* ViewController.m in Sources */,
-				A69099FF23D1824F001F23B4 /* MyLabel.m in Sources */,
 				A66F55D023CEED96009D1720 /* AppDelegate.m in Sources */,
-				A6BB3C6523D0027600D42AF5 /* MyTextView.m in Sources */,
 				A6BB3C6B23D00FA900D42AF5 /* SWMenuController.swift in Sources */,
 				A666A7BB241240B8005E9DD4 /* KLTagLayer.m in Sources */,
 				A66F55E123CEED9A009D1720 /* main.m in Sources */,
