@@ -7,24 +7,23 @@
 //
 
 #import "ViewController.h"
-#import "MenuDemo-Swift.h"
 #import "KLPopMenu.h"
 
 @interface ViewController ()<UITextViewDelegate, KLPopMenuDelegate>
-@property (weak, nonatomic) IBOutlet UITextView *textViewInput;
+@property (weak, nonatomic) IBOutlet UITextView *inputTextView;
+@property (weak, nonatomic) IBOutlet UILabel *customLabel;
+@property (weak, nonatomic) IBOutlet UITextView *systemTextView;
+
 @property (strong, nonatomic) KLPopMenu *popMenu;
-@property (weak, nonatomic) IBOutlet UILabel *label2;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
-@property (nonatomic, assign) BOOL bMenuShow;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textView.tintColor = UIColor.redColor;
-//    self.textView.tintColor = UIColor.redColor;
-    [self.textViewInput becomeFirstResponder];
+    self.systemTextView.tintColor = UIColor.redColor;
+    [self.inputTextView becomeFirstResponder];
+
     //设置输入视图
     [self addNotify];
 }
@@ -42,7 +41,7 @@
 }
 - (void)WillShowMenu:(NSNotification *)notify
 {
-//    [self.popMenu hide];
+    [self.popMenu hide];
     NSLog(@"%s",__func__);
 }
 - (void)WillHideMenu:(NSNotification *)notify
@@ -63,21 +62,19 @@
 - (IBAction)longPress1:(UILongPressGestureRecognizer *)gestureRecognizer {
     if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]]
         && gestureRecognizer.state == UIGestureRecognizerStateBegan) {
-        [self onLongPressInView:self.textView];
-       
         //要成为第一响应者,否则无效
-//        [self.textView resignFirstResponder];
-//        [self.textViewInput nextResponder];
-////        self.textView.selectedRange = NSMakeRange(0, self.textView.text.length);
-//        [self.textView setSelectedTextRange:[self.textView textRangeFromPosition:self.textView.beginningOfDocument toPosition:self.textView.endOfDocument]];
+//        [self.systemTextView becomeFirstResponder];
+        [self onLongPressInView:self.systemTextView];
+
+//        self.systemTextView.selectedRange = NSMakeRange(0, self.systemTextView.text.length);
+//        [self.systemTextView setSelectedTextRange:[self.systemTextView textRangeFromPosition:self.systemTextView.beginningOfDocument toPosition:self.systemTextView.endOfDocument]];
     }
 }
 - (IBAction)longPress2:(UILongPressGestureRecognizer *)gestureRecognizer {
     if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]]
         && gestureRecognizer.state == UIGestureRecognizerStateBegan) {
-        
         NSArray *itemList = @[@"撤回", @"复制", @"转发", @"收藏", @"删除"];
-        [self.popMenu showItemList:itemList withTargetView:self.label2];
+        [self.popMenu showItemList:itemList withTargetView:self.customLabel];
     }
 }
 
@@ -117,10 +114,6 @@
 {
     NSLog(@"%s-复制",__func__);
 }
-- (BOOL)canBecomeFirstResponder
-{
-    return YES;
-}
 
 - (void)menuDidHide:(NSNotification *)notification
 {
@@ -129,7 +122,20 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+//    [self.view endEditing:YES];
     [self.popMenu hide];
+    
+    CGPoint point = [[touches anyObject] locationInView:self.view];
+    CGPoint point1 = [self.systemTextView.layer convertPoint:point fromLayer:self.view.layer];
+    CGPoint point2 = [self.customLabel.layer convertPoint:point fromLayer:self.view.layer];
+    
+    if ([self.systemTextView.layer containsPoint:point1]
+        ||[self.customLabel.layer containsPoint:point2]) {
+        
+    } else {
+        [self.view endEditing:YES];
+    }
+
 }
 
 #pragma mark - KLPopMenuDelegate

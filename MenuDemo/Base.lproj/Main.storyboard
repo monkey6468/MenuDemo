@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wsg-M1-s8X">
-                                <rect key="frame" x="87" y="488" width="240" height="44"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="inputView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wsg-M1-s8X">
+                                <rect key="frame" x="87" y="362" width="240" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.52549019610000003" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="7ag-zy-aEW"/>
@@ -26,8 +26,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="研究当前新冠肺炎疫情防控和稳定经济社会运行重点工作" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g3h-6c-b5P">
-                                <rect key="frame" x="87" y="247" width="240" height="60"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Menu系统" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g3h-6c-b5P">
+                                <rect key="frame" x="87" y="226" width="240" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -35,18 +35,18 @@
                                     <constraint firstAttribute="height" constant="60" id="SgA-WI-Ppf"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="eAI-M4-ytc" appends="YES" id="Bhe-sl-z7Q"/>
                                 </connections>
                             </textView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGC-lJ-OBD">
-                                <rect key="frame" x="87" y="360" width="240" height="70"/>
-                                <color key="backgroundColor" red="1" green="0.50168601140000002" blue="0.99308707039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu自定义" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGC-lJ-OBD">
+                                <rect key="frame" x="87" y="294" width="240" height="60"/>
+                                <color key="backgroundColor" red="0.22352941179999999" green="0.74901960779999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="9ti-py-OBP"/>
+                                    <constraint firstAttribute="height" constant="60" id="9ti-py-OBP"/>
                                     <constraint firstAttribute="width" constant="240" id="fI6-si-wCx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -63,16 +63,16 @@
                             <constraint firstItem="wsg-M1-s8X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I7r-4Y-Bg1"/>
                             <constraint firstItem="wGC-lJ-OBD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N1i-9d-wBk"/>
                             <constraint firstItem="g3h-6c-b5P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RXm-NY-Db1"/>
-                            <constraint firstItem="wGC-lJ-OBD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="316" id="Ydc-U6-ixm"/>
-                            <constraint firstItem="g3h-6c-b5P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="203" id="fmU-lT-x1R"/>
                             <constraint firstItem="g3h-6c-b5P" firstAttribute="leading" secondItem="wsg-M1-s8X" secondAttribute="leading" id="sY8-xy-gnt"/>
+                            <constraint firstItem="wsg-M1-s8X" firstAttribute="top" secondItem="wGC-lJ-OBD" secondAttribute="bottom" constant="8" id="tQG-Ob-FHt"/>
+                            <constraint firstItem="wGC-lJ-OBD" firstAttribute="top" secondItem="g3h-6c-b5P" secondAttribute="bottom" constant="8" id="xjq-L1-itx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="label2" destination="wGC-lJ-OBD" id="JeV-Lm-3nm"/>
-                        <outlet property="textView" destination="g3h-6c-b5P" id="8kk-AX-rvG"/>
-                        <outlet property="textViewInput" destination="wsg-M1-s8X" id="7Fl-DE-iK1"/>
+                        <outlet property="customLabel" destination="wGC-lJ-OBD" id="JeV-Lm-3nm"/>
+                        <outlet property="inputTextView" destination="wsg-M1-s8X" id="7Fl-DE-iK1"/>
+                        <outlet property="systemTextView" destination="g3h-6c-b5P" id="8kk-AX-rvG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

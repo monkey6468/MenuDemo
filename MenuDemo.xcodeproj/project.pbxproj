@@ -18,9 +18,6 @@
 		A66F55DB23CEED9A009D1720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A66F55DA23CEED9A009D1720 /* Assets.xcassets */; };
 		A66F55DE23CEED9A009D1720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A66F55DC23CEED9A009D1720 /* LaunchScreen.storyboard */; };
 		A66F55E123CEED9A009D1720 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F55E023CEED9A009D1720 /* main.m */; };
-		A67750532410A7EF0058D0F5 /* UITextView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = A67750522410A7EF0058D0F5 /* UITextView+Add.m */; };
-		A6BB3C6A23D00FA900D42AF5 /* SWMenuArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB3C6823D00FA900D42AF5 /* SWMenuArrow.swift */; };
-		A6BB3C6B23D00FA900D42AF5 /* SWMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB3C6923D00FA900D42AF5 /* SWMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,12 +41,6 @@
 		A66F55DD23CEED9A009D1720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A66F55DF23CEED9A009D1720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A66F55E023CEED9A009D1720 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A67750512410A7EF0058D0F5 /* UITextView+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Add.h"; sourceTree = "<group>"; };
-		A67750522410A7EF0058D0F5 /* UITextView+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Add.m"; sourceTree = "<group>"; };
-		A6BB3C6723D00FA800D42AF5 /* MenuDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MenuDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		A6BB3C6823D00FA900D42AF5 /* SWMenuArrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMenuArrow.swift; sourceTree = "<group>"; };
-		A6BB3C6923D00FA900D42AF5 /* SWMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMenuController.swift; sourceTree = "<group>"; };
-		A6BB3C6C23D0138B00D42AF5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +88,6 @@
 		A66F55C223CEED96009D1720 = {
 			isa = PBXGroup;
 			children = (
-				A6BB3C6C23D0138B00D42AF5 /* PrefixHeader.pch */,
 				A666A7B0241240B8005E9DD4 /* KLPopMenu */,
 				A66F55CD23CEED96009D1720 /* MenuDemo */,
 				A66F55CC23CEED96009D1720 /* Products */,
@@ -115,10 +105,6 @@
 		A66F55CD23CEED96009D1720 /* MenuDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A6BB3C6823D00FA900D42AF5 /* SWMenuArrow.swift */,
-				A6BB3C6923D00FA900D42AF5 /* SWMenuController.swift */,
-				A6BB3C6723D00FA800D42AF5 /* MenuDemo-Bridging-Header.h */,
-				A67750502410A7BA0058D0F5 /* category */,
 				A66F55CE23CEED96009D1720 /* AppDelegate.h */,
 				A66F55CF23CEED96009D1720 /* AppDelegate.m */,
 				A66F55D123CEED96009D1720 /* SceneDelegate.h */,
@@ -132,15 +118,6 @@
 				A66F55E023CEED9A009D1720 /* main.m */,
 			);
 			path = MenuDemo;
-			sourceTree = "<group>";
-		};
-		A67750502410A7BA0058D0F5 /* category */ = {
-			isa = PBXGroup;
-			children = (
-				A67750512410A7EF0058D0F5 /* UITextView+Add.h */,
-				A67750522410A7EF0058D0F5 /* UITextView+Add.m */,
-			);
-			path = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,11 +192,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A666A7BD241240B8005E9DD4 /* KLPopMenuView.m in Sources */,
-				A6BB3C6A23D00FA900D42AF5 /* SWMenuArrow.swift in Sources */,
-				A67750532410A7EF0058D0F5 /* UITextView+Add.m in Sources */,
 				A66F55D623CEED96009D1720 /* ViewController.m in Sources */,
 				A66F55D023CEED96009D1720 /* AppDelegate.m in Sources */,
-				A6BB3C6B23D00FA900D42AF5 /* SWMenuController.swift in Sources */,
 				A666A7BB241240B8005E9DD4 /* KLTagLayer.m in Sources */,
 				A66F55E123CEED9A009D1720 /* main.m in Sources */,
 				A66F55D323CEED96009D1720 /* SceneDelegate.m in Sources */,
@@ -369,7 +343,6 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G455RMLLQ5;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
-				GCC_PREFIX_HEADER = ../MenuDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/MenuDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,7 +366,6 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G455RMLLQ5;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
-				GCC_PREFIX_HEADER = ../MenuDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/MenuDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
