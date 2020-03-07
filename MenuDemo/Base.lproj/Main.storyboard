@@ -41,49 +41,50 @@
                                     <outletCollection property="gestureRecognizers" destination="eAI-M4-ytc" appends="YES" id="Bhe-sl-z7Q"/>
                                 </connections>
                             </textView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu自定义" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGC-lJ-OBD">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Menu自定义" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wE-Is-oJa">
                                 <rect key="frame" x="87" y="294" width="240" height="60"/>
-                                <color key="backgroundColor" red="0.22352941179999999" green="0.74901960779999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="9ti-py-OBP"/>
-                                    <constraint firstAttribute="width" constant="240" id="fI6-si-wCx"/>
+                                    <constraint firstAttribute="height" constant="60" id="X4E-Zi-Tzs"/>
                                 </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="uv5-GV-H2N" appends="YES" id="mdS-aD-TzG"/>
+                                    <outletCollection property="gestureRecognizers" destination="uv5-GV-H2N" appends="YES" id="eWH-jh-y7Q"/>
                                 </connections>
-                            </label>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wsg-M1-s8X" secondAttribute="bottom" constant="330" id="AcU-n0-ME1"/>
+                            <constraint firstItem="0wE-Is-oJa" firstAttribute="trailing" secondItem="wsg-M1-s8X" secondAttribute="trailing" id="F3l-IM-yHk"/>
+                            <constraint firstItem="0wE-Is-oJa" firstAttribute="top" secondItem="g3h-6c-b5P" secondAttribute="bottom" constant="8" id="HFR-fy-wVA"/>
                             <constraint firstItem="wsg-M1-s8X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I7r-4Y-Bg1"/>
-                            <constraint firstItem="wGC-lJ-OBD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N1i-9d-wBk"/>
                             <constraint firstItem="g3h-6c-b5P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RXm-NY-Db1"/>
+                            <constraint firstItem="0wE-Is-oJa" firstAttribute="leading" secondItem="wsg-M1-s8X" secondAttribute="leading" id="as1-Bd-CeE"/>
+                            <constraint firstItem="wsg-M1-s8X" firstAttribute="top" secondItem="0wE-Is-oJa" secondAttribute="bottom" constant="8" id="qjH-96-lan"/>
                             <constraint firstItem="g3h-6c-b5P" firstAttribute="leading" secondItem="wsg-M1-s8X" secondAttribute="leading" id="sY8-xy-gnt"/>
-                            <constraint firstItem="wsg-M1-s8X" firstAttribute="top" secondItem="wGC-lJ-OBD" secondAttribute="bottom" constant="8" id="tQG-Ob-FHt"/>
-                            <constraint firstItem="wGC-lJ-OBD" firstAttribute="top" secondItem="g3h-6c-b5P" secondAttribute="bottom" constant="8" id="xjq-L1-itx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="customLabel" destination="wGC-lJ-OBD" id="JeV-Lm-3nm"/>
+                        <outlet property="customTextView" destination="0wE-Is-oJa" id="kg1-0B-gXR"/>
                         <outlet property="inputTextView" destination="wsg-M1-s8X" id="7Fl-DE-iK1"/>
                         <outlet property="systemTextView" destination="g3h-6c-b5P" id="8kk-AX-rvG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="uv5-GV-H2N" userLabel="longPress label">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="eAI-M4-ytc" userLabel="systemTextView">
                     <connections>
-                        <action selector="longPress2:" destination="BYZ-38-t0r" id="2dv-Uk-Lm4"/>
+                        <action selector="longPressSystemOperation:" destination="BYZ-38-t0r" id="Ght-PX-YcY"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="eAI-M4-ytc" userLabel="longPress textView">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="uv5-GV-H2N" userLabel="customTextView">
                     <connections>
-                        <action selector="longPress1:" destination="BYZ-38-t0r" id="Ght-PX-YcY"/>
+                        <action selector="longPressCustomOperation:" destination="BYZ-38-t0r" id="2dv-Uk-Lm4"/>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>

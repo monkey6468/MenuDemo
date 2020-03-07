@@ -11,7 +11,7 @@
 
 @interface ViewController ()<UITextViewDelegate, KLPopMenuDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *inputTextView;
-@property (weak, nonatomic) IBOutlet UILabel *customLabel;
+@property (weak, nonatomic) IBOutlet UITextView *customTextView;
 @property (weak, nonatomic) IBOutlet UITextView *systemTextView;
 
 @property (strong, nonatomic) KLPopMenu *popMenu;
@@ -59,7 +59,7 @@
     return YES;
 }
 
-- (IBAction)longPress1:(UILongPressGestureRecognizer *)gestureRecognizer {
+- (IBAction)longPressSystemOperation:(UILongPressGestureRecognizer *)gestureRecognizer {
     if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]]
         && gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         //要成为第一响应者,否则无效
@@ -70,11 +70,13 @@
 //        [self.systemTextView setSelectedTextRange:[self.systemTextView textRangeFromPosition:self.systemTextView.beginningOfDocument toPosition:self.systemTextView.endOfDocument]];
     }
 }
-- (IBAction)longPress2:(UILongPressGestureRecognizer *)gestureRecognizer {
+- (IBAction)longPressCustomOperation:(UILongPressGestureRecognizer *)gestureRecognizer {
     if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]]
         && gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        self.customTextView.selectedRange = NSMakeRange(0, self.customTextView.text.length);
+        
         NSArray *itemList = @[@"撤回", @"复制", @"转发", @"收藏", @"删除"];
-        [self.popMenu showItemList:itemList withTargetView:self.customLabel];
+        [self.popMenu showItemList:itemList withTargetView:self.customTextView];
     }
 }
 
@@ -127,10 +129,10 @@
     
     CGPoint point = [[touches anyObject] locationInView:self.view];
     CGPoint point1 = [self.systemTextView.layer convertPoint:point fromLayer:self.view.layer];
-    CGPoint point2 = [self.customLabel.layer convertPoint:point fromLayer:self.view.layer];
+    CGPoint point2 = [self.customTextView.layer convertPoint:point fromLayer:self.view.layer];
     
     if ([self.systemTextView.layer containsPoint:point1]
-        ||[self.customLabel.layer containsPoint:point2]) {
+        ||[self.customTextView.layer containsPoint:point2]) {
         
     } else {
         [self.view endEditing:YES];
