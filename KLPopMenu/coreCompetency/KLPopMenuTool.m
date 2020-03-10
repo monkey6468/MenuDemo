@@ -56,8 +56,9 @@ CGPoint getCrossPoint(CGPoint point11, CGPoint point12, CGFloat x) {
     //set context
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetRGBStrokeColor(context, 0.4, 0.4, 0.4, 0.9);
-    CGContextSetLineWidth(context, 0.2);
+    CGFloat fTrokeColor = 1, fTrokeColorAlpha = 1;
+    CGContextSetRGBStrokeColor(context, fTrokeColor, fTrokeColor, fTrokeColor, fTrokeColorAlpha);
+    CGContextSetLineWidth(context, 0.1);
     if (isHighlight) {
         CGContextSetRGBFillColor(context, 0.25, 0.25, 0.25, 0.9);
     } else {
