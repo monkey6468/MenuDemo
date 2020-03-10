@@ -49,7 +49,14 @@
     CGFloat maxWidth = popMenuSuperview.bounds.size.width - 10;
     [self handleItemList:itemList maxWidth:maxWidth];
     
-    _arrowDirection = (targetRect.origin.y < KLPopMenuHeight+5) ? KLMenuViewArrowDirectionUp:KLMenuViewArrowDirectionDown;
+    UIView *superView = popMenuSuperview;
+    UIEdgeInsets safeAreaInsets = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *))
+    {
+        safeAreaInsets = superView.safeAreaInsets;
+    }
+    
+    _arrowDirection = (targetRect.origin.y < KLPopMenuHeight+5+safeAreaInsets.top) ? KLMenuViewArrowDirectionUp:KLMenuViewArrowDirectionDown;
     _popMenuSuperview = popMenuSuperview;
     _targetRectInSuperview = targetRect;
     
