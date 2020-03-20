@@ -35,6 +35,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(WillHideMenu:) name:UIMenuControllerWillHideMenuNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MenuFrameDidChange:) name:UIMenuControllerMenuFrameDidChangeNotification object:nil];
 }
+
 - (void)DidHideMenu:(NSNotification *)notify
 {
     NSLog(@"%s",__func__);
