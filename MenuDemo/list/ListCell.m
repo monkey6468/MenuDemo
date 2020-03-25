@@ -8,7 +8,7 @@
 
 #import "ListCell.h"
 
-@interface ListCell ()
+@interface ListCell ()<UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
@@ -32,7 +32,13 @@
 - (void)makeGesture
 {
     self.longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onLongPress:)];
+    self.longPressGesture.delegate = self;
     [self.textView addGestureRecognizer:self.longPressGesture];
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
 }
 
 - (void)onLongPress:(UILongPressGestureRecognizer *)sender {
@@ -43,6 +49,16 @@
             self.textView.selectedRange = NSMakeRange(0, self.textView.text.length);
         }
     }
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer*) otherGestureRecognizer
+{
+    if([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]] && [NSStringFromClass([otherGestureRecognizer class])isEqualToString:@"UITextTapRecognizer"])
+    {
+        return NO;
+    }
+    return YES;
 }
 
 @end

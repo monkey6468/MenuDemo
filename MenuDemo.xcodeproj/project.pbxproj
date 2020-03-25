@@ -25,7 +25,6 @@
 		A666A7BD241240B8005E9DD4 /* KLPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A666A7B8241240B8005E9DD4 /* KLPopMenuView.m */; };
 		A666A7BE241240B8005E9DD4 /* KLPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A666A7BA241240B8005E9DD4 /* KLPopMenu.m */; };
 		A66F55D023CEED96009D1720 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F55CF23CEED96009D1720 /* AppDelegate.m */; };
-		A66F55D323CEED96009D1720 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F55D223CEED96009D1720 /* SceneDelegate.m */; };
 		A66F55D623CEED96009D1720 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A66F55D523CEED96009D1720 /* ViewController.m */; };
 		A66F55D923CEED96009D1720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A66F55D723CEED96009D1720 /* Main.storyboard */; };
 		A66F55DB23CEED9A009D1720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A66F55DA23CEED9A009D1720 /* Assets.xcassets */; };
@@ -76,8 +75,6 @@
 		A66F55CB23CEED96009D1720 /* MenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66F55CE23CEED96009D1720 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A66F55CF23CEED96009D1720 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A66F55D123CEED96009D1720 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		A66F55D223CEED96009D1720 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		A66F55D423CEED96009D1720 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A66F55D523CEED96009D1720 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A66F55D823CEED96009D1720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -224,8 +221,6 @@
 			children = (
 				A66F55CE23CEED96009D1720 /* AppDelegate.h */,
 				A66F55CF23CEED96009D1720 /* AppDelegate.m */,
-				A66F55D123CEED96009D1720 /* SceneDelegate.h */,
-				A66F55D223CEED96009D1720 /* SceneDelegate.m */,
 				A66F55D423CEED96009D1720 /* ViewController.h */,
 				A66F55D523CEED96009D1720 /* ViewController.m */,
 				A678FA5D242456DB00762678 /* list */,
@@ -340,7 +335,6 @@
 				A655127F2424B0E600B7B899 /* IQUIView+Hierarchy.m in Sources */,
 				A66F55E123CEED9A009D1720 /* main.m in Sources */,
 				A65512782424B0E600B7B899 /* IQBarButtonItem.m in Sources */,
-				A66F55D323CEED96009D1720 /* SceneDelegate.m in Sources */,
 				A666A7BC241240B8005E9DD4 /* KLPopMenuTool.m in Sources */,
 				A65512752424B0E600B7B899 /* IQTextView.m in Sources */,
 				A666A7BE241240B8005E9DD4 /* KLPopMenu.m in Sources */,
@@ -490,6 +484,7 @@
 				DEVELOPMENT_TEAM = G455RMLLQ5;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MenuDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,6 +508,7 @@
 				DEVELOPMENT_TEAM = G455RMLLQ5;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MenuDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

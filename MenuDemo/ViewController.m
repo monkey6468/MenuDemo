@@ -22,10 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.systemTextView.tintColor = UIColor.redColor;
-    [self.inputTextView becomeFirstResponder];
+//    [self.inputTextView becomeFirstResponder];
 
     //设置输入视图
-    [self addNotify];
+//    [self addNotify];
 }
 
 - (void)addNotify
