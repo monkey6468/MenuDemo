@@ -154,13 +154,16 @@
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Byt-VG-dJm" appends="YES" id="chk-VB-HE0"/>
+                                </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSK-gp-oF1" customClass="MyButton">
                                 <rect key="frame" x="167.66666666666666" y="350" width="79" height="30"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Test Button"/>
                                 <connections>
-                                    <action selector="onActionTestButton:" destination="rUu-CA-dVG" eventType="touchUpInside" id="jiq-t2-QJb"/>
+                                    <outletCollection property="gestureRecognizers" destination="9wi-S3-SYv" appends="YES" id="cGR-89-aAx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -183,9 +186,20 @@
                         <outlet property="inputTextField" destination="1E1-yo-liR" id="Qoi-7k-pVY"/>
                         <outlet property="inputTopTextView" destination="QcU-r8-5ur" id="9rC-lF-Ijt"/>
                         <outlet property="tableView" destination="2ob-vm-iqd" id="lZl-82-Iq3"/>
+                        <outlet property="testButton" destination="cSK-gp-oF1" id="k5w-1O-yb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIJ-zI-Rqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9wi-S3-SYv">
+                    <connections>
+                        <action selector="onTapTestButton:" destination="rUu-CA-dVG" id="f7L-5l-LJM"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Byt-VG-dJm">
+                    <connections>
+                        <action selector="onTapTopTextView:" destination="rUu-CA-dVG" id="9Er-lK-L2P"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1202.8985507246377" y="51.358695652173914"/>
         </scene>

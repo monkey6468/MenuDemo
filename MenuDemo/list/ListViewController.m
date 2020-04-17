@@ -24,10 +24,6 @@
 
 @property (strong, nonatomic) NSMutableArray *dataArray;
 
-@property (strong, nonatomic) UILongPressGestureRecognizer *longPressGesture;
-@property (strong, nonatomic) UILongPressGestureRecognizer *longPressGesture2;
-@property (strong, nonatomic) UILongPressGestureRecognizer *longPressGesture3;
-
 @end
 
 @implementation ListViewController
@@ -43,28 +39,15 @@
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ListCell class])
                                                bundle:nil]
          forCellReuseIdentifier:NSStringFromClass(ListCell.class)];
-    
-    [self makeGesture];
-}
-
-- (void)dealloc
-{
-    [self.inputTopTextView removeGestureRecognizer:self.longPressGesture];
 }
 
 #pragma mark - other
-- (void)makeGesture
-{
-    self.longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onLongPress:)];
-    self.longPressGesture.delegate = self;
-    [self.inputTopTextView addGestureRecognizer:self.longPressGesture];
-    
-    self.longPressGesture3 = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onTapTestButton:)];
-    self.longPressGesture3.delegate = self;
-    [self.testButton addGestureRecognizer:self.longPressGesture3];
+- (IBAction)onTapTopTextView:(id)sender {
+    self.inputTopTextView.selectedRange = NSMakeRange(0, self.inputTopTextView.text.length);
+    [self onLongPressInView:self.inputTopTextView];
 }
 
-- (void)onTapTestButton:(UILongPressGestureRecognizer *)sender {
+- (IBAction)onTapTestButton:(id)sender {
     [self onLongPressInView:self.testButton];
 }
 
@@ -75,15 +58,6 @@
 - (IBAction)onActionTestButton:(UIButton *)sender {
 //    self.testButton.selectedRange = NSMakeRange(0, self.testButton.length);
     [self onLongPressInView:self.testButton];
-}
-
-- (void)onLongPress:(UILongPressGestureRecognizer *)sender
-{
-    if (sender.state == UIGestureRecognizerStateBegan)
-    {
-        self.inputTopTextView.selectedRange = NSMakeRange(0, self.inputTopTextView.text.length);
-        [self onLongPressInView:self.inputTopTextView];
-    }
 }
 
 //- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
