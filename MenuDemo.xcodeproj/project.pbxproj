@@ -33,6 +33,8 @@
 		A678FA602424571E00762678 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A678FA5F2424571E00762678 /* ListViewController.m */; };
 		A678FA642424574400762678 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A678FA622424574400762678 /* ListCell.m */; };
 		A678FA652424574400762678 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A678FA632424574400762678 /* ListCell.xib */; };
+		A6868F3A244987B300A4325B /* MyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6868F39244987B300A4325B /* MyTextView.m */; };
+		A6868F3F244995E500A4325B /* MyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A6868F3E244995E500A4325B /* MyButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,10 @@
 		A678FA612424574400762678 /* ListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
 		A678FA622424574400762678 /* ListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
 		A678FA632424574400762678 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		A6868F38244987B300A4325B /* MyTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTextView.h; sourceTree = "<group>"; };
+		A6868F39244987B300A4325B /* MyTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTextView.m; sourceTree = "<group>"; };
+		A6868F3D244995E500A4325B /* MyButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyButton.h; sourceTree = "<group>"; };
+		A6868F3E244995E500A4325B /* MyButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +229,8 @@
 				A66F55CF23CEED96009D1720 /* AppDelegate.m */,
 				A66F55D423CEED96009D1720 /* ViewController.h */,
 				A66F55D523CEED96009D1720 /* ViewController.m */,
+				A6868F402449975600A4325B /* MyButton */,
+				A6868F3C24498D7B00A4325B /* MyTextView */,
 				A678FA5D242456DB00762678 /* list */,
 				A66F55D723CEED96009D1720 /* Main.storyboard */,
 				A66F55DA23CEED9A009D1720 /* Assets.xcassets */,
@@ -238,11 +246,37 @@
 			children = (
 				A678FA5E2424571E00762678 /* ListViewController.h */,
 				A678FA5F2424571E00762678 /* ListViewController.m */,
+				A6868F3B24498D6B00A4325B /* ListCell */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		A6868F3B24498D6B00A4325B /* ListCell */ = {
+			isa = PBXGroup;
+			children = (
 				A678FA612424574400762678 /* ListCell.h */,
 				A678FA622424574400762678 /* ListCell.m */,
 				A678FA632424574400762678 /* ListCell.xib */,
 			);
-			path = list;
+			path = ListCell;
+			sourceTree = "<group>";
+		};
+		A6868F3C24498D7B00A4325B /* MyTextView */ = {
+			isa = PBXGroup;
+			children = (
+				A6868F38244987B300A4325B /* MyTextView.h */,
+				A6868F39244987B300A4325B /* MyTextView.m */,
+			);
+			path = MyTextView;
+			sourceTree = "<group>";
+		};
+		A6868F402449975600A4325B /* MyButton */ = {
+			isa = PBXGroup;
+			children = (
+				A6868F3D244995E500A4325B /* MyButton.h */,
+				A6868F3E244995E500A4325B /* MyButton.m */,
+			);
+			path = MyButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +356,7 @@
 				A65512802424B0E600B7B899 /* IQUIViewController+Additions.m in Sources */,
 				A655127B2424B0E600B7B899 /* IQKeyboardManager.m in Sources */,
 				A655127A2424B0E600B7B899 /* IQPreviousNextView.m in Sources */,
+				A6868F3A244987B300A4325B /* MyTextView.m in Sources */,
 				A65512812424B0E600B7B899 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A65512772424B0E600B7B899 /* IQTitleBarButtonItem.m in Sources */,
 				A65512792424B0E600B7B899 /* IQUIView+IQKeyboardToolbar.m in Sources */,
@@ -331,6 +366,7 @@
 				A678FA602424571E00762678 /* ListViewController.m in Sources */,
 				A678FA642424574400762678 /* ListCell.m in Sources */,
 				A66F55D023CEED96009D1720 /* AppDelegate.m in Sources */,
+				A6868F3F244995E500A4325B /* MyButton.m in Sources */,
 				A666A7BB241240B8005E9DD4 /* KLTagLayer.m in Sources */,
 				A655127F2424B0E600B7B899 /* IQUIView+Hierarchy.m in Sources */,
 				A66F55E123CEED9A009D1720 /* main.m in Sources */,

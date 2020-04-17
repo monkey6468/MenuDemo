@@ -10,8 +10,6 @@
 
 @interface ListCell ()<UIGestureRecognizerDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
-
 @property (strong, nonatomic) UILongPressGestureRecognizer *longPressGesture;
 
 @end
@@ -36,9 +34,14 @@
     [self.textView addGestureRecognizer:self.longPressGesture];
 }
 
-- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+//- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+//{
+//    return NO;
+//}
+
+-(BOOL)canBecomeFirstResponder
 {
-    return NO;
+    return YES;
 }
 
 - (void)onLongPress:(UILongPressGestureRecognizer *)sender {

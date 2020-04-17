@@ -10,9 +10,9 @@
 #import "KLPopMenu.h"
 
 @interface ViewController ()<UITextViewDelegate, KLPopMenuDelegate>
-@property (weak, nonatomic) IBOutlet UITextView *inputTextView;
-@property (weak, nonatomic) IBOutlet UITextView *customTextView;
 @property (weak, nonatomic) IBOutlet UITextView *systemTextView;
+@property (weak, nonatomic) IBOutlet UITextView *customTextView;
+@property (weak, nonatomic) IBOutlet UITextView *inputTextView;
 
 @property (strong, nonatomic) KLPopMenu *popMenu;
 @end
@@ -140,6 +140,7 @@
     }
 
 }
+
 
 #pragma mark - KLPopMenuDelegate
 - (void)popMenuClickedWithTitle:(NSString *)title {

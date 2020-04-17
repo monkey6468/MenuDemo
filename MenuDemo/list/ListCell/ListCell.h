@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ListCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic, weak) id<ListCellDelegate> delegate;
 
 @end

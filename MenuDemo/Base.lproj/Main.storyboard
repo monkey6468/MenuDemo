@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O5v-as-6Ri">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O5v-as-6Ri">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,9 +58,8 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bb-Tv-FOf">
-                                <rect key="frame" x="147" y="163" width="120" height="48"/>
+                                <rect key="frame" x="176" y="163" width="62" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="0xo-bP-U2a"/>
                                     <constraint firstAttribute="height" constant="48" id="Egv-YS-3O3"/>
                                 </constraints>
                                 <state key="normal" title="列表界面"/>
@@ -116,7 +116,7 @@
                                 <rect key="frame" x="0.0" y="110" width="414" height="200"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ob-vm-iqd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="rUu-CA-dVG" id="q6k-vb-FRU"/>
@@ -134,7 +134,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="1E1-yo-liR" firstAttribute="top" secondItem="2ob-vm-iqd" secondAttribute="bottom" id="62Z-aa-u0p"/>
+                                    <constraint firstItem="1E1-yo-liR" firstAttribute="top" secondItem="2ob-vm-iqd" secondAttribute="bottom" constant="12" id="62Z-aa-u0p"/>
                                     <constraint firstAttribute="bottom" secondItem="1E1-yo-liR" secondAttribute="bottom" constant="8" id="9iQ-hf-tN6"/>
                                     <constraint firstAttribute="height" constant="200" id="IXK-Sl-JEd"/>
                                     <constraint firstAttribute="trailing" secondItem="2ob-vm-iqd" secondAttribute="trailing" id="OPO-4H-RoH"/>
@@ -144,7 +144,7 @@
                                     <constraint firstItem="2ob-vm-iqd" firstAttribute="leading" secondItem="L9M-XL-xFL" secondAttribute="leading" id="xis-5W-oyh"/>
                                 </constraints>
                             </view>
-                            <textView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="双方一致同意奥运火种将留在日本。会议还同意，东京2020年奥运会和残奥会的名称不变。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QcU-r8-5ur">
+                            <textView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="双方一致同意奥运火种将留在日本。会议还同意，东京2020年奥运会和残奥会的名称不变。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QcU-r8-5ur" customClass="MyTextView">
                                 <rect key="frame" x="16" y="52" width="382" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
@@ -155,14 +155,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSK-gp-oF1" customClass="MyButton">
+                                <rect key="frame" x="167.66666666666666" y="350" width="79" height="30"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Test Button"/>
+                                <connections>
+                                    <action selector="onActionTestButton:" destination="rUu-CA-dVG" eventType="touchUpInside" id="jiq-t2-QJb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Gq7-C0-AsE" firstAttribute="trailing" secondItem="QcU-r8-5ur" secondAttribute="trailing" constant="16" id="1UB-Y1-s6D"/>
                             <constraint firstItem="QcU-r8-5ur" firstAttribute="leading" secondItem="Gq7-C0-AsE" secondAttribute="leading" constant="16" id="LH3-56-w8T"/>
+                            <constraint firstItem="cSK-gp-oF1" firstAttribute="top" secondItem="L9M-XL-xFL" secondAttribute="bottom" constant="40" id="NE3-AK-zNk"/>
                             <constraint firstItem="QcU-r8-5ur" firstAttribute="top" secondItem="Gq7-C0-AsE" secondAttribute="top" constant="8" id="bt3-YE-oDO"/>
                             <constraint firstItem="L9M-XL-xFL" firstAttribute="top" secondItem="QcU-r8-5ur" secondAttribute="bottom" constant="8" id="m8D-Tc-625"/>
                             <constraint firstItem="L9M-XL-xFL" firstAttribute="trailing" secondItem="Gq7-C0-AsE" secondAttribute="trailing" id="tSO-eu-ACq"/>
+                            <constraint firstItem="cSK-gp-oF1" firstAttribute="centerX" secondItem="zZy-xx-cbc" secondAttribute="centerX" id="uQc-VS-25T"/>
                             <constraint firstItem="L9M-XL-xFL" firstAttribute="leading" secondItem="Gq7-C0-AsE" secondAttribute="leading" id="w2v-Kl-noo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gq7-C0-AsE"/>
